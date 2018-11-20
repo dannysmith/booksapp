@@ -16,9 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      'https://gist.githubusercontent.com/dannysmith/0e203810e2561d235fad1175487b43c3/raw/e4b51ba21b43a58dfb77440f9a6af27b247e6d3a/books.json'
-    )
+    fetch('/.netlify/functions/getBooks')
       .then((res) => res.json())
       .then((json) => {
         this.setState({

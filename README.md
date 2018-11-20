@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+```
+yarn start # Start dev server
+yarn run build # Build new version of producion code
+
+yarn run build:lambda # Build lambda functions
+AIRTABLE_API_KEY=XXXXXXXX yarn run start:lambda # Run lambda functions on port 9000
+```
+
 ## TODO
 
 - [ ] Create a Lambda function in `./functions` that gets Books from Githib and is called by the App component
@@ -21,22 +29,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Write up article as Markdown
 - [ ] Record screencasts from markdown
 - [ ] Edit and publish screencasts/
-
-### Example Lambda function
-
-`./functions/getBooks.js`
-
-```js
-exports.handler = function(event, context, callback) {
-  fetch('http://datasource.json')
-    .then((res) => res.json())
-    .then((json) => {
-      callback(null, {
-        statusCode: 200,
-        body: json,
-      })
-    })
-}
-```
-
-I can call `GET /.netlify/functions/getBooks` to run the function
