@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.scss'
 import Spinner from './components/spinner'
 import Overlay from './components/overlay'
+import Book from './components/book'
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      'https://gist.githubusercontent.com/dannysmith/0e203810e2561d235fad1175487b43c3/raw/5e4bb34d44c00f2ad2a5d0d1fdcb93fc3364a0d2/books.json'
+      'https://gist.githubusercontent.com/dannysmith/0e203810e2561d235fad1175487b43c3/raw/e4b51ba21b43a58dfb77440f9a6af27b247e6d3a/books.json'
     )
       .then((res) => res.json())
       .then((json) => {
@@ -39,7 +40,7 @@ class App extends Component {
       return (
         <div className="app">
           {books.map((book, index) => (
-            <p key={index}>{book.title}</p>
+            <Book key={index} {...book} />
           ))}
         </div>
       )

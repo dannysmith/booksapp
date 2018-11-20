@@ -1,0 +1,41 @@
+.book {
+  // display: flex;
+  max-width: 300px;
+  margin: 3rem;
+  padding-bottom: 1rem;
+
+  progress {
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0 0 0.2rem;
+  }
+
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.review {
+  margin-top: 1rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.7);
+}
