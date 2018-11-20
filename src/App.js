@@ -25,11 +25,17 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="app">
-        <p>Hello</p>
-      </div>
-    )
+    let { isLoaded, items } = this.state
+
+    if (!isLoaded) {
+      return <p>Loading!</p>
+    } else {
+      return (
+        <div className="app">
+          <p>Data is loaded</p>
+        </div>
+      )
+    }
   }
 }
 
