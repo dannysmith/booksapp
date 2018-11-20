@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
 exports.handler = function(event, context, callback) {
