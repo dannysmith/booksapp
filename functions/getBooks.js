@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch')
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
