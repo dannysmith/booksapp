@@ -1,0 +1,17 @@
+.bookGrid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 550px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 850px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

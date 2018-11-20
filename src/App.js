@@ -3,6 +3,7 @@ import './App.scss'
 import Spinner from './components/spinner'
 import Overlay from './components/overlay'
 import Book from './components/book'
+import BookGrid from './components/bookGrid'
 
 class App extends Component {
   constructor(props) {
@@ -39,9 +40,11 @@ class App extends Component {
     } else {
       return (
         <div className="app">
-          {books.map((book, index) => (
-            <Book key={index} {...book} />
-          ))}
+          <BookGrid>
+            {books.map((book, index) => (
+              <Book key={index} {...book} />
+            ))}
+          </BookGrid>
         </div>
       )
     }
