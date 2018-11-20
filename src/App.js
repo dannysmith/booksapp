@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
+import Spinner from './components/spinner'
+import Overlay from './components/overlay'
 
 class App extends Component {
   constructor(props) {
@@ -28,13 +30,13 @@ class App extends Component {
     let { isLoaded, items } = this.state
 
     if (!isLoaded) {
-      return <p>Loading!</p>
-    } else {
       return (
-        <div className="app">
-          <p>Data is loaded</p>
-        </div>
+        <Overlay>
+          <Spinner />
+        </Overlay>
       )
+    } else {
+      return <div className="app" />
     }
   }
 }
