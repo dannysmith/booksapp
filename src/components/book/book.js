@@ -29,8 +29,8 @@ function Book(props) {
         <h2>{props.author}</h2>
         {metadata}
         <p>
-          {props.tags.map((tag) => (
-            <Tag label={tag} />
+          {props.tags.map((tag, index) => (
+            <Tag key={index} label={tag} />
           ))}
         </p>
       </div>

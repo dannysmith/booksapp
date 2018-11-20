@@ -39,8 +39,8 @@ class App extends Component {
       return (
         <div className="app">
           <BookGrid>
-            {books.map((book, index) => (
-              <Book key={index} {...book} />
+            {books.map((book) => (
+              <Book key={book.id} {...book} />
             ))}
           </BookGrid>
         </div>
