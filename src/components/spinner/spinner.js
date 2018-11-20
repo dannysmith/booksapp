@@ -3,7 +3,7 @@ import styles from './spinner.module.scss'
 
 function Spinner(props) {
   return (
-    <div class={styles.spinner}>
+    <div className={styles.spinner}>
       <div className={styles.spinwheel} />
     </div>
   )

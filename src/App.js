@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    let { isLoaded, items } = this.state
+    let { isLoaded, books } = this.state
 
     if (!isLoaded) {
       return (
@@ -36,7 +36,13 @@ class App extends Component {
         </Overlay>
       )
     } else {
-      return <div className="app" />
+      return (
+        <div className="app">
+          {books.map((book, index) => (
+            <p key={index}>{book.title}</p>
+          ))}
+        </div>
+      )
     }
   }
 }
